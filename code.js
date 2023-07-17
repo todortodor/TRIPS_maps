@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         },
         nodeOverlap: 1e9,
         animationThreshold: 20,
-        refresh: 20,
+        refresh: 2,
     })
 
     cyMap = cy.mapboxgl({
