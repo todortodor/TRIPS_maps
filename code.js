@@ -146,9 +146,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     cy.nodes().qtip({
         content: function(){ 
-            return `${this.id()} : Gross output = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Value']}Mio.
-            \$ <br> Gross output change = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Hat']}%
-            \$ <br> Welfare change = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Welfare']}%`
+            return `${this.id()} : Gross output = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Value']}Mio.\$ 
+            <br> Change = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Hat']}%
+            <br> Welfare change = ${this.data()[document.getElementById('State').value + document.getElementById('Flow').value + 'Welfare']}%`
         },
         position: {
             my: 'top center',
