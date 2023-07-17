@@ -66,13 +66,13 @@ window.addEventListener('DOMContentLoaded', async () => {
         name: 'cose',
         animate: true,
         randomize: true,
-        numIter: 1000,
-        coolingFactor: 0.999,
+        numIter: 10000,
+        coolingFactor: 0.995,
         gravity: 10,
         initialTemp: 50000,
         minTemp: 1,
         edgeElasticity: function (edge) {
-            return (2 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
+            return (0.5 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
         animationThreshold: 1,
