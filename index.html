@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>UZH trade analysis</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://unpkg.com/cytoscape@3.15.2/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/cytoscape-mapbox-gl@1.2.0/dist/cytoscape-mapbox-gl.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.qtip.css">
+    <!-- <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.js"></script> -->
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="jquery.qtip.js"></script>
+    <script src="cytoscape-qtip.js"></script>
+    <script src="FileSaver.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #graph {
+            width: 100vw;
+            height: 100vh;
+            /* position: absolute; */
+            top: 0px;
+            left: 0px;
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="graph"></div>
+    <div id="controls">
+        <select id="basemap">
+            <option value="raster">Raster</option>
+            <option value="vector">Vector</option>
+        </select>
+        <select id="mapOrNetwork">
+            <option value="map">Map</option>
+            <option value="network">Network</option>
+        </select>
+        <select id="State">
+            <option value="Baseline"> Baseline</option>
+            <option value="Nash"> Nash equilibrium</option>
+            <option value="Negishi"> Cooperative equilibrium Negishi weights</option>
+            <option value="Equal"> Cooperative equilibrium Equal weights</option>
+        </select>
+        <select id="Flow">
+            <option value="TF"> Total trade flow</option>
+            <option value="TFO"> Trade flow Non-patenting sector</option>
+            <option value="TF1"> Trade flow Patenting sector</option>
+            <option value="PF"> Patent flow</option>
+        </select><br><br>
+        <button type="button" id="resetview">Reset view</button>
+        <button type="button" id="exportimage">Export as image</button>
+
+        <!-- <div style="height: 100px"></div> -->
+    </div>
+    <script src="code.js"></script>
+
+
+</body>
+
+</html>
