@@ -17,9 +17,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                 'text-halign': 'center',
                 'text-background-opacity': 0,
                 'text-background-padding': 4,
-                "width": "mapData(BaselineTFValueSize, 0, 1, 20, 200)",
-                "height": "mapData(BaselineTFValueSize, 0, 1, 20, 200)",
-                'opacity': 0.9,
+                "width": "mapData(BaselineTFValueSize, 0, 1, 80, 200)",
+                "height": "mapData(BaselineTFValueSize, 0, 1, 80, 200)",
+                // 'opacity': 0.9,
                 'font-size': "mapData(BaselineTFValueSize, 0, 1, 10, 50)",
                 'overlay-opacity': 0,
             }
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             selector: 'edge',
             style: {
                 'line-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
-                'width': "mapData(BaselineTFValueSize, 0, 1, 0, 20)",
+                'width': "mapData(BaselineTFValueSize, 0, 1, 0, 80)",
                 'curve-style': 'unbundled-bezier',
                 'opacity': "mapData(BaselineTFValueSize, 0, 1, 0.5, 1)",
                 'target-arrow-shape': 'triangle-backcurve',
@@ -68,10 +68,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         numIter: 1000,
         coolingFactor: 0.99,
         gravity: 10,
-        initialTemp: 1000,
+        initialTemp: 5000,
         minTemp: 1,
         edgeElasticity: function (edge) {
-            return (0.5 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
+            return (0.8 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
         animationThreshold: 400,
@@ -214,8 +214,8 @@ window.addEventListener('DOMContentLoaded', async () => {
                     'text-halign': 'center',
                     'text-background-opacity': 0,
                     'text-background-padding': 4,
-                    "width": "mapData(" + State + Flow + "ValueSize, 0, 1, 20, 200)",
-                    "height": "mapData(" + State + Flow + "ValueSize, 0, 1, 20, 200)",
+                    "width": "mapData(" + State + Flow + "ValueSize, 0, 1, 80, 200)",
+                    "height": "mapData(" + State + Flow + "ValueSize, 0, 1, 80, 200)",
                     // 'opacity': 0.8,
                     'font-size': "mapData(" + State + Flow + "ValueSize, 0, 1, 10, 50)",
                     'overlay-opacity': 0,
@@ -233,9 +233,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                 selector: 'edge',
                 style: {
                     'line-color': "mapData(" + State + Flow + "HatColor, 0, 1, red, green)",
-                    'width': "mapData(" + State + Flow + "ValueSize, 0, 1, 0, 20)",
+                    'width': "mapData(" + State + Flow + "ValueSize, 0, 1, 0, 80)",
                     'curve-style': 'unbundled-bezier',
-                    'opacity': "mapData(" + State + Flow + "ValueSize, 0, 1, 0.5, 1)",
+                    // 'opacity': "mapData(" + State + Flow + "ValueSize, 0, 1, 0.5, 1)",
                     'target-arrow-shape': 'triangle-backcurve',
                     'source-arrow-shape': 'circle',
                     'target-arrow-color': "mapData(" + State + Flow + "HatColor, 0, 1, red, green)",
