@@ -10,8 +10,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             style: {
                 'border-color': '#ffffff',
                 'border-width': 2,
-                // 'background-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
-                'background-color': "mapData(EqualTFHatColor, 0, 1, red, green)",
+                'background-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
                 'color': 'white',
                 'label': 'data(id)',
                 'text-valign': 'center',
@@ -69,11 +68,11 @@ window.addEventListener('DOMContentLoaded', async () => {
         randomize: false,
         numIter: 1000,
         coolingFactor: 0.99,
-        gravity: 10,
+        gravity: 100,
         initialTemp: 5000,
         minTemp: 1,
         edgeElasticity: function (edge) {
-            return (0.8 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
+            return (10 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
         animationThreshold: 400,
