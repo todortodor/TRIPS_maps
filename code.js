@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     let newLayout = cy.layout({
         name: 'cose',
         animate: true,
-        randomize: false,
+        randomize: true,
         numIter: 1000,
         coolingFactor: 0.99,
         gravity: 1,
@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', async () => {
             return (30 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
-        animationThreshold: 400,
-        refresh: 50,
+        animationThreshold: 1,
+        refresh: 1,
     })
 
     cyMap = cy.mapboxgl({
