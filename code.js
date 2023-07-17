@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', async () => {
             return (0.5 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
-        animationThreshold: 1,
-        refresh: 1,
+        animationThreshold: 2,
+        refresh: 2,
     })
 
     cyMap = cy.mapboxgl({
