@@ -10,7 +10,8 @@ window.addEventListener('DOMContentLoaded', async () => {
             style: {
                 'border-color': '#ffffff',
                 'border-width': 2,
-                'background-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
+                // 'background-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
+                'background-color': "mapData(EqualTFHatColor, 0, 1, red, green)",
                 'color': 'white',
                 'label': 'data(id)',
                 'text-valign': 'center',
