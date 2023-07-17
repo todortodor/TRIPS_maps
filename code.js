@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 "width": "mapData(BaselineTFValueSize, 0, 1, 80, 200)",
                 "height": "mapData(BaselineTFValueSize, 0, 1, 80, 200)",
                 // 'opacity': 0.9,
-                'font-size': "mapData(BaselineTFValueSize, 0, 1, 10, 50)",
+                'font-size': "mapData(BaselineTFValueSize, 0, 1, 40, 50)",
                 'overlay-opacity': 0,
             }
         },
@@ -217,7 +217,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     "width": "mapData(" + State + Flow + "ValueSize, 0, 1, 80, 200)",
                     "height": "mapData(" + State + Flow + "ValueSize, 0, 1, 80, 200)",
                     // 'opacity': 0.8,
-                    'font-size': "mapData(" + State + Flow + "ValueSize, 0, 1, 10, 50)",
+                    'font-size': "mapData(" + State + Flow + "ValueSize, 0, 1, 40, 50)",
                     'overlay-opacity': 0,
                 }
             },
