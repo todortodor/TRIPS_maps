@@ -65,10 +65,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     let newLayout = cy.layout({
         name: 'cose',
         animate: true,
-        randomize: true,
-        numIter: 10000,
-        coolingFactor: 0.995,
-        gravity: 10,
+        randomize: false,
+        numIter: 5000,
+        coolingFactor: 0.99,
+        gravity: 20,
         initialTemp: 1000,
         minTemp: 1,
         edgeElasticity: function (edge) {
