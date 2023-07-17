@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         randomize: true,
         numIter: 1000,
         coolingFactor: 0.999,
-        gravity: 1,
+        gravity: 10,
         initialTemp: 50000,
         minTemp: 1,
         edgeElasticity: function (edge) {
