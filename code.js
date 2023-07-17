@@ -67,9 +67,9 @@ window.addEventListener('DOMContentLoaded', async () => {
         animate: true,
         randomize: true,
         numIter: 1000,
-        coolingFactor: 0.99,
+        coolingFactor: 0.999,
         gravity: 1,
-        initialTemp: 5000,
+        initialTemp: 50000,
         minTemp: 1,
         edgeElasticity: function (edge) {
             return (30 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
