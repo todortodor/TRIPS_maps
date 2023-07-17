@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         initialTemp: 50000,
         minTemp: 1,
         edgeElasticity: function (edge) {
-            return (30 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
+            return (2 / Math.max(edge.data().totalShareOutputSource, edge.data().totalShareInputTarget)) ** 4
         },
         nodeOverlap: 1e9,
         animationThreshold: 1,
