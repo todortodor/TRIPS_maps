@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             selector: 'edge',
             style: {
                 'line-color': "mapData(BaselineTFHatColor, 0, 1, red, green)",
-                'width': "mapData(BaselineTFValueSize, 0, 1, 0, 80)",
+                'width': "mapData(BaselineTFValueSize, 0, 1, 0, 20)",
                 'curve-style': 'unbundled-bezier',
                 'opacity': "mapData(BaselineTFValueSize, 0, 1, 0.5, 1)",
                 'target-arrow-shape': 'triangle-backcurve',
@@ -233,7 +233,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 selector: 'edge',
                 style: {
                     'line-color': "mapData(" + State + Flow + "HatColor, 0, 1, red, green)",
-                    'width': "mapData(" + State + Flow + "ValueSize, 0, 1, 0, 80)",
+                    'width': "mapData(" + State + Flow + "ValueSize, 0, 1, 0, 20)",
                     'curve-style': 'unbundled-bezier',
                     // 'opacity': "mapData(" + State + Flow + "ValueSize, 0, 1, 0.5, 1)",
                     'target-arrow-shape': 'triangle-backcurve',
